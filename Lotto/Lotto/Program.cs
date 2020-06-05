@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Lotto
 {
-	class Program
+	internal class Program
 	{
 		static int cumulation;
 		static int START = 30;
@@ -46,7 +46,7 @@ namespace Lotto
 						choose = Console.ReadKey().Key;
 						if (choose == ConsoleKey.D1 && money > 4 && tickets < 6)
 						{
-						newCoupon.CouponList.Add(lotteryTicket.UseLotteryTicket());
+							newCoupon.CouponList.Add(lotteryTicket.UseLotteryTicket());
 							money -= 4;
 							tickets++;
 						}

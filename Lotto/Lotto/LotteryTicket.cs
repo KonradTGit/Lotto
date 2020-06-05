@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace Lotto
 {
-	class LotteryTicket
+	internal class LotteryTicket
 	{
 		public int[] UseLotteryTicket()
 		{

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Lotto
 {
-	class Coupon
+	internal class Coupon
 	{
 		public List<int[]> CouponList { get; set; } = new List<int[]>();
 
