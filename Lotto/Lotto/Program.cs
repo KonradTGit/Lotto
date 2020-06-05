@@ -46,7 +46,7 @@ namespace Lotto
 						choose = Console.ReadKey().Key;
 						if (choose == ConsoleKey.D1 && money > 4 && tickets < 6)
 						{
-						newCoupon.CouponList.Add(lotteryTicket.useLotteryTicket());
+						newCoupon.CouponList.Add(lotteryTicket.UseLotteryTicket());
 							money -= 4;
 							tickets++;
 						}
@@ -86,41 +86,6 @@ namespace Lotto
 				Console.WriteLine("Press Enter to continue.");
 			} while (Console.ReadKey().Key == ConsoleKey.Enter);
 		}
-
-		//private static int[] Uselotteryticket()
-		//{
-		//	int[] numbers = new int[6];
-		//	for (int i = 0; i < numbers.Length; i++)
-		//	{
-		//		Console.Clear();
-		//		Console.Write("Circled numbers: ");
-		//		foreach (int l in numbers)
-		//		{
-		//			if (l > 0)
-		//			{
-		//				Console.Write(l + ", ");
-		//			}
-		//		}
-		//		Console.WriteLine("\n\nChose number from 1 to 49:");
-		//		Console.Write("{0}/6: ", i + 1);
-		//		int number;
-		//		bool good = int.TryParse(Console.ReadLine(), out number);
-		//		if (good && number >= 1 && number <= 49 && !numbers.Contains(number))
-		//		{
-		//			numbers[i] = number;
-		//		}
-		//		else
-		//		{
-		//			Console.WriteLine("Sorry, wrong number.");
-		//			i--;
-		//			Console.ReadKey();
-		//		}
-
-		//	}
-		//	Array.Sort(numbers);
-		//	return numbers;
-		//}
-
 		private static int check(Coupon coupon)
 		{
 			int win = 0;
@@ -172,72 +137,5 @@ namespace Lotto
 			}
 			return win;
 		}
-
-		//private static int[] CheckCoupon(List<int[]> coupon, int[] drawn)
-		//{
-		//	int[] win = new int[4];
-		//	int i = 0;
-		//	Console.WriteLine("\n\nYOUR COUPON: ");
-		//	foreach (int[] ticket in coupon)
-		//	{
-		//		i++;
-		//		Console.Write(i + ": ");
-		//		int hit = 0;
-		//		foreach (var number in ticket)
-		//		{
-		//			if (drawn.Contains(number))
-		//			{
-		//				Console.ForegroundColor = ConsoleColor.Green;
-		//				Console.Write(number + ", ");
-		//				Console.ResetColor();
-		//				hit++;
-		//			}
-		//			else
-		//			{
-		//				Console.Write(number + ", ");
-		//			}
-		//		}
-		//		switch (hit)
-		//		{
-		//			case 3:
-		//				win[0]++;
-		//				break;
-		//			case 4:
-		//				win[1]++;
-		//				break;
-		//			case 5:
-		//				win[2]++;
-		//				break;
-		//			case 6:
-		//				win[3]++;
-		//				break;
-		//		}
-		//		Console.WriteLine(" - HIT {0}/6", hit);
-		//	}
-		//	return win;
-		//}
-
-		//private static void ShowCoupon(List<int[]> coupon)
-		//{
-		//	if (coupon.Count == 0)
-		//	{
-		//		Console.WriteLine("You don't use any coupons.");
-		//	}
-		//	else
-		//	{
-		//		int i = 0;
-		//		Console.Write("Your coupon: \n");
-		//		foreach (int[] ticket in coupon)
-		//		{
-		//			i++;
-		//			Console.Write(i + ":\n ");
-		//			foreach (int number in ticket)
-		//			{
-		//				Console.Write(number + ", ");
-		//			}
-		//			Console.WriteLine();
-		//		}
-		//	}
-		//}
 	}
 }

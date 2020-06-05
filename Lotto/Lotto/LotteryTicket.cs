@@ -5,7 +5,7 @@ namespace Lotto
 {
 	class LotteryTicket
 	{
-		public int[] useLotteryTicket()
+		public int[] UseLotteryTicket()
 		{
 			int[] numbers = new int[6];
 			for (int i = 0; i < numbers.Length; i++)
